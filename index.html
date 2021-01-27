@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu</title>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <div id="preloader">
+    <div id="status"> <img src="img/preloader.gif" height="64" width="64" alt=""> </div>
+  </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i
+            class="fa fa-bars"></i> </button>
+        <a class="navbar-brand page-scroll" href="#page-top"> <i class="fa fa-cutlery"></i>Коворкинг Центр</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li class="hidden"> <a href="#page-top"></a> </li>
+          <li> <a class="page-scroll" href="#services">Что мы можем</a> </li>
+          <li> <a class="page-scroll" href="#testimonials">Что говорят о нас</a> </li>
+          <li> <a class="page-scroll" href="#contact">Наши контакты</a> </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+
+  <!-- Header -->
+  <div id="intro">
+    <div class="intro-body">
+      <div class="container back">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <h1>Коворкинг центр <span class="brand-heading">Happy Place</span></h1>
+            <p class="intro-text">Сервис для аренды помещений</p>
+            <a data-toggle="modal" data-target="#myModal" class="btn btn-default page-scroll">Регистрация</a>
+          </div>
+          <div class="container">
+            <!-- Modal -->
+            <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog"
+              aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <br>
+                  <div class="bs-example bs-example-tabs">
+                    <ul id="myTab" class="nav nav-tabs">
+                      <li class="active"><a href="#signin" data-toggle="tab">Вход</a></li>
+                      <li class=""><a href="#signup" data-toggle="tab">Регистрация</a></li>
+                      <li class=""><a href="#why" data-toggle="tab">Помощь</a></li>
+                    </ul>
+                  </div>
+                  <div class="modal-body">
+                    <div id="myTabContent" class="tab-content">
+                      <div class="tab-pane fade in" id="why">
+                        <p style="color:black;">Для использования сервиса необходимо зарегистрироваться.</p>
+                        <p style="color:black;"><br> Если у Вас есть вопросы, свяжитесь с нами. <a
+                            mailto:href="olga1legkikh@gmail.com"></a>admin@happyplace.com</a></p>
+                      </div>
+                      <div class="tab-pane fade active in" id="signin">
+                        <form action="/sign_up" method="post" accept-charset="utf-8" data-toggle="validator">
+                          <div class="form-group">
+                            <input name="user" type="text" class="form-control" id="user" placeholder="Логин" required>
+                          </div>
+                          <div class="form-group">
+                            <input name="password" type="password" class="form-control" id="password"
+                              placeholder="Пароль" required>
+                          </div>
+                          <div class="control-group">
+                            <label class="control-label" for="signin"></label>
+                            <div class="controls">
+                              <button type="submit" name="signin" class="btn btn-success">Войти</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="signup">
+                        <form role="form" action="/sign_in" method="post" accept-charset="utf-8"
+                          data-toggle="validator">
+                          <!-- Sign Up Form -->
+                          <!-- Text input-->
+                          <div class="form-group">
+                            <input name="email" type="email" class="form-control" id="email"
+                              pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$"
+                              placeholder="Адрес электронной почты" data-error="Не похоже на электронную почту"
+                              required>
+                          </div>
+                          <!-- Text input-->
+                          <div class="form-group">
+                            <input name="user" type="text" data-minlength="3" class="form-control" id="user"
+                              placeholder="Логин" required>
+                          </div>
+                          <!-- Password input-->
+                          <div class="form-group">
+                            <input name="password" type="password" data-minlength="6" class="form-control"
+                              id="inputPassword" placeholder="Пароль - минимум 6 знаков" required>
+                          </div>
+                          <!-- Text input-->
+                          <div class="form-group">
+                            <input name="reenterpassword" type="password" class="form-control" id="reenterpassword"
+                              data-match="#inputPassword" data-match-error="Пароли не совпадают"
+                              placeholder="Повторите пароль" required>
+                          </div>
+                          <!-- Button -->
+                          <div class="control-group">
+                            <label class="control-label" for="confirmsignup"></label>
+                            <div class="controls">
+                              <button type="submit" name="confirmsignup" class="btn btn-success">Зарегистрироваться</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Services Section -->
+  <div id="services" class="text-center">
+    <div class="container">
+      <div class="section-title center">
+        <h2>Что мы можем</h2>
+        <hr>
+      </div>
+      <div class="space"></div>
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="service"> <i class="fa fa-desktop"></i>
+            <h3>ВСЕ</h3>
+            <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="service"> <i class="fa fa-cogs"></i>
+            <h3>ЧТО</h3>
+            <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="service"> <i class="fa fa-tablet"></i>
+            <h3>УГОДНО</h3>
+            <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="service"><i class="fa fa-html5"></i>
+            <h3>Считаем до 5</h3>
+            <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</p>
+          </div>
+        </div>
+      </div>
+      <div class="space"></div>
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="service"><i class="fa fa-wordpress"></i>
+            <h3>Веселимся</h3>
+            <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="service"><i class="fa fa-bullhorn"></i>
+            <h3>Шопимся</h3>
+            <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="service"><i class="fa fa-rocket"></i>
+            <h3>Брэндим</h3>
+            <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="service"><i class="fa fa-leaf"></i>
+            <h3>Все отрицаем</h3>
+            <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Testimonials Section -->
+  <div id="testimonials" class="text-center">
+    <div class="container">
+      <div class="section-title center">
+        <h2>Что о нас говорят</h2>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="row testimonials">
+            <div class="col-sm-4">
+              <blockquote><i class="fa fa-quote-left"></i>
+                <p>Отличное место, чтобы почилить.</p>
+                <div class="clients-name">
+                  <p><strong>John Doe</strong><br>
+                    <em>CEO, Company Inc.</em>
+                  </p>
+                </div>
+              </blockquote>
+            </div>
+            <div class="col-sm-4">
+              <blockquote><i class="fa fa-quote-left"></i>
+                <p>Код который здесь пишется, содержит на 10% ошибок меньше. </p>
+                <div class="clients-name">
+                  <p><strong>Jane Doe</strong><br>
+                    <em>CEO, Company Inc.</em>
+                  </p>
+                </div>
+              </blockquote>
+            </div>
+            <div class="col-sm-4">
+              <blockquote><i class="fa fa-quote-left"></i>
+                <p>В чем сила, Брат! Сила в хорошем коворкинг центре!</p>
+                <div class="clients-name">
+                  <p><strong>Chris Smith</strong><br>
+                    <em>CEO, Company Inc.</em>
+                  </p>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="text-center">
+    <div class="container">
+      <div class="section-title center">
+        <h2>Свяжись с нами!</h2>
+        <hr>
+        <p>Ты пожалеешь но тебе понравится</p>
+      </div>
+      <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-4">
+          <div class="contact-item"> <i class="fa fa-map-marker fa-2x"></i>
+            <p>ул, Кальварийская, 21<br>
+              Минск, Беларуст</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-item"> <i class="fa fa-envelope-o fa-2x"></i>
+            <p>ihfo@happyplace.com</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-item"> <i class="fa fa-phone fa-2x"></i>
+            <p> +1 123 456 1234<br>
+              +1 321 456 1234</p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="col-md-8 col-md-offset-2">
+        <h3>Оставить сообщение</h3>
+        <form name="sentMessage" id="contactForm" novalidate>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" id="name" class="form-control" placeholder="Имя" required="required">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Сообщение"
+              required></textarea>
+            <p class="help-block text-danger"></p>
+          </div>
+          <div id="success"></div>
+          <button type="submit" class="btn btn-default">Отправить сообщение</button>
+        </form>
+        <div class="btn-group">
+          <h3>Следуй за мной</h3>
+          <ul>
+            <a href="#"><i class="fa fa-vk"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <p>Copyright &copy; Январь 2021. Создано с любовью <a href="http://www.templatewire.com" rel="nofollow">Январь 2021</a></p>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.parallax.js"></script>
+<script type="text/javascript" src="js/validator.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
