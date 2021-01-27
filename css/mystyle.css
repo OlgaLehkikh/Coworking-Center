@@ -1,0 +1,5 @@
+#intro .intro-body {
+	display: table-cell;
+	vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.77);
+}
